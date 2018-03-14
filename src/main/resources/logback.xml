@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<configuration debug="false">
+	<appender name="INFO-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>E:/A_A/apache-tomcat-8.0.14/logback/myo2o/logs/info/info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>E:/A_A/apache-tomcat-8.0.14/logback/myo2o/logs/info/info.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{55} -
+				%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<appender name="ACCESS-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			E:/A_A/apache-tomcat-8.0.14/logback/myo2o/logs/access/access.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>E:/A_A/apache-tomcat-8.0.14/logback/myo2o/logs/access/access.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{55} -
+				%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="com.imooc.myo2o" level="DEBUG" additivity="false">
+		<!--additivity的属性为true时，会继承root中的appender-ref,但是继承来的也要按照logger标签里面的level属性来-->
+		<appender-ref ref="ACCESS-FILE" />
+	</logger>
+	<root level="INFO">
+		<appender-ref ref="INFO-FILE" />
+	</root>
+</configuration>
