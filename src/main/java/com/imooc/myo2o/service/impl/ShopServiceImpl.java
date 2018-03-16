@@ -19,7 +19,7 @@ import com.imooc.myo2o.enums.ShopStateEnum;
 import com.imooc.myo2o.service.ShopService;
 import com.imooc.myo2o.util.FileUtil;
 import com.imooc.myo2o.util.ImageUtil;
-//import com.imooc.myo2o.util.PageCalculator;
+import com.imooc.myo2o.util.PageCalculator;
 
 @Service
 public class ShopServiceImpl implements ShopService {
@@ -30,22 +30,22 @@ public class ShopServiceImpl implements ShopService {
 	@Autowired
 	private ShopCategoryDao shopCategoryDao;
 
-//	@Override
-//	public ShopExecution getShopList(Shop shopCondition, int pageIndex,
-//			int pageSize) {
-//		int rowIndex = PageCalculator.calculateRowIndex(pageIndex, pageSize);
-//		List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex,
-//				pageSize);
-//		int count = shopDao.queryShopCount(shopCondition);
-//		ShopExecution se = new ShopExecution();
-//		if (shopList != null) {
-//			se.setShopList(shopList);
-//			se.setCount(count);
-//		} else {
-//			se.setState(ShopStateEnum.INNER_ERROR.getState());
-//		}
-//		return se;
-//	}
+	@Override
+	public ShopExecution getShopList(Shop shopCondition, int pageIndex,
+			int pageSize) {
+		int rowIndex = PageCalculator.calculateRowIndex(pageIndex, pageSize);
+		List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex,
+				pageSize);
+		int count = shopDao.queryShopCount(shopCondition);
+		ShopExecution se = new ShopExecution();
+		if (shopList != null) {
+			se.setShopList(shopList);
+			se.setCount(count);
+		} else {
+			se.setState(ShopStateEnum.INNER_ERROR.getState());
+		}
+		return se;
+	}
 
 	@Override
 	public ShopExecution getByEmployeeId(long employeeId)
@@ -134,6 +134,7 @@ public class ShopServiceImpl implements ShopService {
 
 	@Override
 	@Transactional
+	//public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream,String fileName)
 	public ShopExecution modifyShop(Shop shop, CommonsMultipartFile shopImg)
 			throws RuntimeException {
 		if (shop == null || shop.getShopId() == null) {

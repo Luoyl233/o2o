@@ -15,6 +15,7 @@ public interface ProductService {
 	ProductExecution addProduct(Product product, CommonsMultipartFile thumbnail, List<CommonsMultipartFile> productImgs)
 			throws RuntimeException;
 
+	//商品 缩略图 详情图
 	ProductExecution modifyProduct(Product product, CommonsMultipartFile thumbnail,
                                    List<CommonsMultipartFile> productImgs) throws RuntimeException;
 }

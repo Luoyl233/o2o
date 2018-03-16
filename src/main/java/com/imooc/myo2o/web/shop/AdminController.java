@@ -63,6 +63,7 @@ public class AdminController {
 			Object currentShopObj = request.getSession().getAttribute(
 					"currentShop");
 			if (currentShopObj == null) {
+				System.out.println("shop/shoplist");
 				return "shop/shoplist";
 			} else {
 				return "shop/shopmanage";
@@ -77,7 +78,7 @@ public class AdminController {
 
 	@RequestMapping(value = "/shopedit", method = RequestMethod.GET)
 	private String shopEdit() {
-		return "shop/shopedit";
+		return "shop/shopoperation";
 	}
 
 	@RequestMapping(value = "/productmanage", method = RequestMethod.GET)

@@ -57,21 +57,33 @@ public class ShopDaoTest extends BaseTest {
 
 	@Test
 	public void testBQueryShopList() throws Exception {
-		Shop shop = new Shop();
-		List<Shop> shopList = shopDao.queryShopList(shop, 0, 2);
-		assertEquals(2, shopList.size());
-		int count = shopDao.queryShopCount(shop);
-		assertEquals(3, count);
-		shop.setShopName("花");
-		shopList = shopDao.queryShopList(shop, 0, 3);
-		assertEquals(2, shopList.size());
-		count = shopDao.queryShopCount(shop);
-		assertEquals(2, count);
-		shop.setShopId(1L);
-		shopList = shopDao.queryShopList(shop, 0, 3);
-		assertEquals(1, shopList.size());
-		count = shopDao.queryShopCount(shop);
-		assertEquals(1, count);
+//		Shop shop = new Shop();
+//		List<Shop> shopList = shopDao.queryShopList(shop, 0, 2);
+//		assertEquals(2, shopList.size());
+//		int count = shopDao.queryShopCount(shop);
+//		assertEquals(3, count);
+//		shop.setShopName("花");
+//		shopList = shopDao.queryShopList(shop, 0, 3);
+//		assertEquals(2, shopList.size());
+//		count = shopDao.queryShopCount(shop);
+//		assertEquals(2, count);
+//		shop.setShopId(1L);
+//		shopList = shopDao.queryShopList(shop, 0, 3);
+//		assertEquals(1, shopList.size());
+//		count = shopDao.queryShopCount(shop);
+//		assertEquals(1, count);
+		Shop shopCondition= new Shop();
+        shopCondition.setOwnerId(9L);
+        List<Shop> list=shopDao.queryShopList(shopCondition,0,10);
+        int num=shopDao.queryShopCount(shopCondition);
+        assertEquals(5,num);
+
+        ShopCategory sc=new ShopCategory();
+        sc.setShopCategoryId(18L);
+        shopCondition.setShopCategory(sc);
+        shopCondition.setOwnerId(null);
+        list=shopDao.queryShopList(shopCondition,0,10);
+        assertEquals(3,list.size());
 
 	}
 
@@ -92,7 +104,7 @@ public class ShopDaoTest extends BaseTest {
 		ShopCategory shopCategory = new ShopCategory();
 		shopCategory.setShopCategoryId(17L);
 		shop.setShopCategory(shopCategory);
-		shop.setShopName("四季花");
+		shop.setShopName("三生三世");
 		int effectedNum = shopDao.updateShop(shop);
 		assertEquals(1, effectedNum);
 	}

@@ -1,43 +1,57 @@
 $(function() {
 
-	//var shopId = getQueryString('shopId');
+	var shopId = getQueryString('shopId');
 
-	// var isEdit = shopId ? true : false;
+	var isEdit = shopId ? true : false;
 
-	var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=1';
-	alert('123456');
-	// var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=' + shopId;
+	//var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=1';
+	//alert('1234567');
+	var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=' + shopId;
 	var initUrl = '/myo2o/shop/getshopinitinfo';
 	var editShopUrl = '/myo2o/shop/registershop';
-	// if (isEdit) {
-	// 	editShopUrl = '/myo2o/shop/modifyshop';
-	// }
+	if (isEdit) {
+		editShopUrl = '/myo2o/shop/modifyshop';
+	}
+
+    if (isEdit) {
+        getInfo(shopId);
+    }
+    else {
+        getCategory();
+    }
+
 // isEdit为true，则为修改店铺，isEdit为false，则为创建店铺
-// 	function getInfo(shopId) {
-// 		$.getJSON(shopInfoUrl, function(data) {
-// 			if (data.success) {
-// 				var shop = data.shop;
-//
-//
-// 				$('#shop-name').val(shop.shopName);
-// 				$('#shop-addr').val(shop.shopAddr);
-// 				$('#shop-phone').val(shop.phone);
-// 				$('#shop-desc').val(shop.shopDesc);
-// 				var shopCategory = '<option data-id="'
-// 						+ shop.shopCategory.shopCategoryId + '" selected>'
-// 						+ shop.shopCategory.shopCategoryName + '</option>';
-// 				var tempAreaHtml = '';
-// 				data.areaList.map(function(item, index) {
-// 					tempAreaHtml += '<option data-id="' + item.areaId + '">'
-// 							+ item.areaName + '</option>';
-// 				});
-// 				$('#shop-category').html(shopCategory);
-// 				$('#shop-category').attr('disabled','disabled');
-// 				$('#area').html(tempAreaHtml);
-// 				$('#area').attr('data-id',shop.areaId);
-// 			}
-// 		});
-// 	}
+	function getInfo(shopId) {
+		$.getJSON(shopInfoUrl, function(data) {
+			if (data.success) {
+				var shop = data.shop;
+
+				//alert('edit1');
+				$('#shop-name').val(shop.shopName);
+				$('#shop-addr').val(shop.shopAddr);
+				$('#shop-phone').val(shop.phone);
+				$('#shop-desc').val(shop.shopDesc);
+				var shopCategory = '<option data-id="'
+						+ shop.shopCategory.shopCategoryId + '" selected>'
+						+ shop.shopCategory.shopCategoryName + '</option>';
+				var tempAreaHtml = '';
+				data.areaList.map(function(item, index) {
+                    tempAreaHtml += '<option data-id="' + item.areaId + '">'
+                        + item.areaName + '</option>';
+                });
+				//alert(tempAreaHtml);
+				$('#shop-category').html(shopCategory);
+				$('#shop-category').attr('disabled','disabled');
+				$('#area').html(tempAreaHtml);
+
+                $('#area').val(shop.area.areaName);
+
+                //$('#area').attr('data-id',shop.areaId);
+
+
+            }
+		});
+	}
 //得到以前的  getshopinitinfo
 	function getCategory() {
 		$.getJSON(initUrl, function(data) {
@@ -60,11 +74,7 @@ $(function() {
 		});
 	}
 
-	// if (isEdit) {
-	// 	getInfo(shopId);
-	// } else {
-	getCategory();
-	//}
+
 
 	$('#submit').click(function() {
 		var shop = {};
@@ -110,7 +120,7 @@ $(function() {
 					if (isEdit){
 						$('#captcha_img').click();
 					} else{
-						window.location.href="/shop/shoplist";
+						window.location.href="/myo2o/shop/shoplist";
 					}
 				} else {
 					$.toast('提交失败！'+data.errMsg);

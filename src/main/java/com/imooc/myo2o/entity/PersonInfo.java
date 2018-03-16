@@ -6,14 +6,17 @@ public class PersonInfo {
 
 	private Long userId;
 	private String name;
-	private Date birthday;
+	//private Date birthday;
 	private String gender;
-	private String phone;
+	//private String phone;
 	private String email;
 	private String profileImg;
-	private Integer customerFlag;
-	private Integer shopOwnerFlag;
-	private Integer adminFlag;
+//	private Integer customerFlag;
+//	private Integer shopOwnerFlag;
+//	private Integer adminFlag;
+
+    //1.customer 2.shopOwner 3.admin
+	private Integer userType;
 	private Date createTime;
 	private Date lastEditTime;
 	private Integer enableStatus;
@@ -34,13 +37,13 @@ public class PersonInfo {
 		this.name = name;
 	}
 
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+//	public Date getBirthday() {
+//		return birthday;
+//	}
+//
+//	public void setBirthday(Date birthday) {
+//		this.birthday = birthday;
+//	}
 
 	public String getGender() {
 		return gender;
@@ -50,13 +53,13 @@ public class PersonInfo {
 		this.gender = gender;
 	}
 
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+//	public String getPhone() {
+//		return phone;
+//	}
+//
+//	public void setPhone(String phone) {
+//		this.phone = phone;
+//	}
 
 	public String getEmail() {
 		return email;
@@ -74,29 +77,29 @@ public class PersonInfo {
 		this.profileImg = profileImg;
 	}
 
-	public Integer getCustomerFlag() {
-		return customerFlag;
-	}
-
-	public void setCustomerFlag(Integer customerFlag) {
-		this.customerFlag = customerFlag;
-	}
-
-	public Integer getShopOwnerFlag() {
-		return shopOwnerFlag;
-	}
-
-	public void setShopOwnerFlag(Integer shopOwnerFlag) {
-		this.shopOwnerFlag = shopOwnerFlag;
-	}
-
-	public Integer getAdminFlag() {
-		return adminFlag;
-	}
-
-	public void setAdminFlag(Integer adminFlag) {
-		this.adminFlag = adminFlag;
-	}
+//	public Integer getCustomerFlag() {
+//		return customerFlag;
+//	}
+//
+//	public void setCustomerFlag(Integer customerFlag) {
+//		this.customerFlag = customerFlag;
+//	}
+//
+//	public Integer getShopOwnerFlag() {
+//		return shopOwnerFlag;
+//	}
+//
+//	public void setShopOwnerFlag(Integer shopOwnerFlag) {
+//		this.shopOwnerFlag = shopOwnerFlag;
+//	}
+//
+//	public Integer getAdminFlag() {
+//		return adminFlag;
+//	}
+//
+//	public void setAdminFlag(Integer adminFlag) {
+//		this.adminFlag = adminFlag;
+//	}
 
 	public Date getCreateTime() {
 		return createTime;
@@ -122,4 +125,11 @@ public class PersonInfo {
 		this.enableStatus = enableStatus;
 	}
 
+    public Integer getUserType() {
+        return userType;
+    }
+
+    public void setUserType(Integer userType) {
+        this.userType = userType;
+    }
 }

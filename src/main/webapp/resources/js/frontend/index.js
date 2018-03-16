@@ -8,8 +8,9 @@ $(function() {
             headLineList.map(function (item, index) {
                 swiperHtml += ''
                             + '<div class="swiper-slide img-wrap">'
-                            +      '<img class="banner-img" src="'+ item.lineImg +'" alt="'+ item.lineName +'">'
-                            + '</div>';
+                            //+      '<img class="banner-img" src="'+ item.lineImg +'" alt="'+ item.lineName +'">'
+                    +'<img class="banner-img" src="/E:/projectdev/image/upload/images/item/headtitle/2017061320315746624.jpg" alt="'+ item.lineName +'">'
+                    + '</div>';
             });
             $('.swiper-wrapper').html(swiperHtml);
             $(".swiper-container").swiper({

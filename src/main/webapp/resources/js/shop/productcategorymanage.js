@@ -1,34 +1,9 @@
 $(function() {
-	var shopId = 1;
-	var listUrl = '/myo2o/shop/listproductcategorys?shopId=' + shopId;
+	//var shopId = 1;
+	var listUrl = '/myo2o/shop/listproductcategorys';
 	var addUrl = '/myo2o/shop/addproductcategorys';
 	var deleteUrl = '/myo2o/shop/removeproductcategory';
-
-	$
-			.getJSON(
-					listUrl,
-					function(data) {
-						if (data.success) {
-							var dataList = data.data;
-							$('.category-wrap').html('');
-							var tempHtml = '';
-							dataList
-									.map(function(item, index) {
-										tempHtml += ''
-												+ '<div class="row row-product-category now">'
-												+ '<div class="col-33 product-category-name">'
-												+ item.productCategoryName
-												+ '</div>'
-												+ '<div class="col-33">'
-												+ item.priority
-												+ '</div>'
-												+ '<div class="col-33"><a href="#" class="button delete" data-id="'
-												+ item.productCategoryId
-												+ '">删除</a></div>' + '</div>';
-									});
-							$('.category-wrap').append(tempHtml);
-						}
-					});
+    getList();
 
 	function getList() {
 		$
@@ -58,7 +33,7 @@ $(function() {
 							}
 						});
 	}
-	getList();
+
 
 	$('#submit').click(function() {
 		var tempArr = $('.temp');
@@ -106,8 +81,8 @@ $(function() {
 						url : deleteUrl,
 						type : 'POST',
 						data : {
-							productCategoryId : target.dataset.id,
-							shopId : shopId
+							productCategoryId : target.dataset.id//,
+							//shopId : shopId
 						},
 						dataType : 'json',
 						success : function(data) {

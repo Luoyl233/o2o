@@ -7,6 +7,7 @@ public class Shop {
 
 	private Long shopId;
 	private Long ownerId;
+	private Long areaId;
 	private Long shopCategoryId;
 	private String shopName;
 	private String shopDesc;
@@ -18,6 +19,7 @@ public class Shop {
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
+	//-1不可用0审核中1可用
 	private Integer enableStatus;
 	private String advice;
 
@@ -182,4 +184,11 @@ public class Shop {
 		this.parentCategory = parentCategory;
 	}
 
+	public Long getAreaId() {
+		return areaId;
+	}
+
+	public void setAreaId(Long areaId) {
+		this.areaId = areaId;
+	}
 }

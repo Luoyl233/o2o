@@ -51,6 +51,22 @@ public class ShopServiceTest extends BaseTest {
 
 
 	@Test
+	public void testGetShopList() throws Exception {
+		Shop shopCondition =new Shop();
+
+		ShopCategory sc=new ShopCategory();
+		sc.setShopCategoryId(18L);
+
+		shopCondition.setShopCategory(sc);
+
+		ShopExecution shopExecution=shopService.getShopList(shopCondition,2,2);
+
+		System.out.println("列表数为"+shopExecution.getShopList().size());
+		System.out.println("总数为"+shopExecution.getCount());
+	}
+
+
+	@Test
 	public void testGetByEmployeeId() throws Exception {
 		long employeeId = 1;
 		ShopExecution shopExecution = shopService.getByEmployeeId(employeeId);

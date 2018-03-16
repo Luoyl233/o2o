@@ -75,13 +75,77 @@ public class ShopManagementController {
 //		}
 //		return modelMap;
 //	}
+    @RequestMapping(value = "/getshopmanagementinfo", method = RequestMethod.GET)
+    @ResponseBody
+    private Map<String, Object> getShopManagementInfo(HttpServletRequest request){
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        long shopId=HttpServletRequestUtil.getLong(request,"shopId");
+        if(shopId<=0){
+            Object currentShopObj=request.getSession().getAttribute("currentShop");
+            if(currentShopObj==null){
+                modelMap.put("redirect",true);
+                modelMap.put( "url","/myo2o/shop/shoplist");
 
-//	@RequestMapping(value = "/getshopbyid", method = RequestMethod.GET)
-//	@ResponseBody
-//	private Map<String, Object> getShopById(@RequestParam Long shopId,
-//			HttpServletRequest request) {
-//		Map<String, Object> modelMap = new HashMap<String, Object>();
-//		if (shopId != null && shopId > -1) {
+            }
+            else {
+                Shop currentShop = (Shop) currentShopObj;
+                modelMap.put("redirect",false);
+                modelMap.put("shopId",currentShop.getShopId());
+            }
+        }else{
+            Shop currentShop =new Shop();
+            currentShop.setShopId(shopId);
+            request.getSession().setAttribute("currentShop",currentShop);
+            modelMap.put("redirect",false);
+        }
+        return  modelMap;
+    }
+
+
+@RequestMapping(value = "/list", method = RequestMethod.GET)
+@ResponseBody
+private Map<String, Object> getShopList(HttpServletRequest request) {
+    Map<String, Object> modelMap = new HashMap<String, Object>();
+    PersonInfo user=new PersonInfo();
+    user.setUserId(8L);
+    user.setName("lee");
+    request.getSession().setAttribute("user",user);
+
+    user = (PersonInfo) request.getSession()
+            .getAttribute("user");
+
+    List<Shop> list = new ArrayList<Shop>();
+
+    try {
+        Shop shopCondition = new Shop();
+        shopCondition.setOwnerId(user.getUserId());
+
+        ShopExecution shopExecution = shopService
+                .getShopList(shopCondition, 0, 100);
+
+        list = shopExecution.getShopList();
+        modelMap.put("shopList", list);
+        modelMap.put("user", user);
+        modelMap.put("success", true);
+        // 列出店铺成功之后，将店铺放入session中作为权限验证依据，即该帐号只能操作它自己的店铺
+        request.getSession().setAttribute("shopList", list);
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        modelMap.put("success", false);
+        modelMap.put("errMsg", e.toString());
+    }
+    return modelMap;
+}
+
+
+
+	@RequestMapping(value = "/getshopbyid", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> getShopById(@RequestParam Long shopId,
+			HttpServletRequest request) {
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		if (shopId != null && shopId > -1) {
 //			Shop shop = shopService.getByShopId(shopId);
 //			shop.getShopCategory().setShopCategoryName(
 //					shopCategoryService.getShopCategoryById(
@@ -102,13 +166,26 @@ public class ShopManagementController {
 //			}
 //			modelMap.put("areaList", areaList);
 //			modelMap.put("success", true);
-//		} else {
-//			modelMap.put("success", false);
-//			modelMap.put("errMsg", "empty shopId");
-//		}
-//		return modelMap;
-//	}
-//
+            try{
+            Shop shop = shopService.getByShopId(shopId);
+            List<Area> areaList = new ArrayList<Area>();areaList = areaService.getAreaList();
+            modelMap.put("shop", shop);
+            request.getSession().setAttribute("currentShop", shop);
+            modelMap.put("areaList", areaList);
+			modelMap.put("success", true);}
+			catch(Exception e){
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.toString());
+            }
+
+		} else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "empty shopId");
+
+		}
+		return modelMap;
+	}
+
 	@RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String, Object> getShopInitInfo() {
@@ -163,10 +240,15 @@ public class ShopManagementController {
 		Shop currentShop = (Shop) request.getSession().getAttribute(
 				"currentShop");
 		shop.setShopId(currentShop.getShopId());
+        ShopExecution se;
 		if (shop != null && shop.getShopId() != null) {
 			filterAttribute(shop);
 			try {
-				ShopExecution se = shopService.modifyShop(shop, shopImg);
+			    if(shopImg==null){
+                     se= shopService.modifyShop(shop, null);
+                }else {
+                     se = shopService.modifyShop(shop, shopImg);
+                }
 				if (se.getState() == ProductCategoryStateEnum.SUCCESS
 						.getState()) {
 					modelMap.put("success", true);

@@ -23,9 +23,8 @@ public class PersonInfoDaoTest extends BaseTest {
 		PersonInfo personInfo = new PersonInfo();
 		personInfo.setName("我爱你");
 		personInfo.setGender("女");
-		personInfo.setCustomerFlag(1);
-		personInfo.setShopOwnerFlag(0);
-		personInfo.setAdminFlag(0);
+		personInfo.setUserType(1);
+
 		personInfo.setCreateTime(new Date());
 		personInfo.setLastEditTime(new Date());
 		personInfo.setEnableStatus(1);
@@ -46,7 +45,7 @@ public class PersonInfoDaoTest extends BaseTest {
 		assertEquals(2, personInfoList.size());
 		count = personInfoDao.queryPersonInfoCount(personInfo);
 		assertEquals(2, count);
-		personInfo.setShopOwnerFlag(1);
+		personInfo.setUserType(2);
 		personInfoList = personInfoDao.queryPersonInfoList(personInfo, 0, 3);
 		assertEquals(1, personInfoList.size());
 		count = personInfoDao.queryPersonInfoCount(personInfo);
