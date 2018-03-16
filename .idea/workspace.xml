@@ -10,88 +10,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/ShopManagementController.java" line="92" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="948d94b6-83f0-42ff-b061-4bd4952bed17" name="Default" comment="ch1_9">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/impl/HeadLineServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/impl/ProductCategoryServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/impl/ProductServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/util/PageCalculator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/frontend/FrontendController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/frontend/MainPageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/frontend/ShopDetailController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/frontend/ShopListController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/ProductCategoryManagementController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/ProductManagementController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/interceptor/shop/ShopLoginInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/interceptor/superadmin/SuperAdminLoginInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/interceptor/shop/ShopLoginInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/interceptor/superadmin/SuperAdminLoginInterceptor.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/HeadLine.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/HeadLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/PersonInfo.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/PersonInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/Product.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/Shop.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/entity/Shop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/service/ShopService.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/service/ShopService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/service/impl/ShopServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/service/impl/ShopServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/web/shop/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/web/shop/AdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/web/shop/ShopManagementController.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/myo2o/web/shop/ShopManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o.war" afterPath="$PROJECT_DIR$/target/myo2o.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/HeadLine.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/HeadLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/PersonInfo.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/PersonInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/Product.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/Shop.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/entity/Shop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/AreaService.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/AreaService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/ShopService.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/ShopService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/impl/AreaServiceImpl.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/impl/AreaServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/impl/ShopServiceImpl.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/service/impl/ShopServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/web/shop/AdminController.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/web/shop/AdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/web/shop/ShopManagementController.class" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/com/imooc/myo2o/web/shop/ShopManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/PersonInfoDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/PersonInfoDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/ProductCategoryDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/ProductCategoryDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/ShopDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/dao/ShopDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/service/ShopServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/myo2o/service/ShopServiceTest.class" />
+    <list default="true" id="948d94b6-83f0-42ff-b061-4bd4952bed17" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/HeadLine.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/HeadLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/PersonInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/PersonInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/Shop.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/entity/Shop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/interceptor/shop/ShopLoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/interceptor/shop/ShopLoginInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/interceptor/superadmin/SuperAdminLoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/interceptor/superadmin/SuperAdminLoginInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/ShopService.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/ShopService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/impl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/service/impl/ShopServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/ShopManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/myo2o/web/shop/ShopManagementController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/frontend/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/frontend/shopdetail.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/frontend/shopdetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/productedit.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/productedit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shoplist.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shoplist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shopmanage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shopmanage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shopoperation.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/shopoperation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/shopdetail.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/shopdetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productedit.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productedit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopedit.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopedit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopmanage.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopmanage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/PersonInfoDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/PersonInfoDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/ProductCategoryDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/ProductCategoryDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/ShopDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/dao/ShopDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/service/ShopServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/myo2o/service/ShopServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ProductCategoryDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductCategoryDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/mapper/ProductCategoryDao.xml" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/mapper/ProductCategoryDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/classes/mapper/ShopDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/frontend/index.html" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/productedit.html" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/productedit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shoplist.html" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shoplist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shopmanage.html" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shopmanage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shopoperation.html" afterPath="$PROJECT_DIR$/target/myo2o/WEB-INF/html/shop/shopoperation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/resources/js/frontend/index.js" afterPath="$PROJECT_DIR$/target/myo2o/resources/js/frontend/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/resources/js/shop/productcategorymanage.js" afterPath="$PROJECT_DIR$/target/myo2o/resources/js/shop/productcategorymanage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/resources/js/shop/productedit.js" afterPath="$PROJECT_DIR$/target/myo2o/resources/js/shop/productedit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/resources/js/shop/shopedit.js" afterPath="$PROJECT_DIR$/target/myo2o/resources/js/shop/shopedit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myo2o/resources/js/shop/shopmanage.js" afterPath="$PROJECT_DIR$/target/myo2o/resources/js/shop/shopmanage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -991,8 +911,16 @@
       <workItem from="1520994520652" duration="990000" />
       <workItem from="1520997569526" duration="9000" />
       <workItem from="1520997600871" duration="21677000" />
-      <workItem from="1521027059610" duration="38454000" />
+      <workItem from="1521027059610" duration="38649000" />
     </task>
+    <task id="LOCAL-00001" summary="ch1_9">
+      <created>1521195187216</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521195187216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1028,7 +956,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157825000" />
+    <option name="totallyTimeSpent" value="158020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1045,7 +973,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25908372" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.76303315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4628752" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1054,7 +982,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33807266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30307466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30307466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
