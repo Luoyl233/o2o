@@ -18,7 +18,7 @@
 	</settings>
 
 	<plugins>
-        <plugin interceptor="com.imooc.myo2o.dao.split.DynamicDataSourceInterceptor">
+        <plugin interceptor="com.web.myo2o.dao.split.DynamicDataSourceInterceptor">
 
         </plugin>
     </plugins>

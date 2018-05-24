@@ -35,7 +35,7 @@
 			</pattern>
 		</layout>
 	</appender>
-	<logger name="com.imooc.myo2o" level="DEBUG" additivity="false">
+	<logger name="com.web.myo2o" level="DEBUG" additivity="false">
 		<!--additivity的属性为true时，会继承root中的appender-ref,但是继承来的也要按照logger标签里面的level属性来-->
 		<appender-ref ref="ACCESS-FILE" />
 	</logger>

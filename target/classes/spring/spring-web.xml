@@ -35,7 +35,7 @@
 	</bean>
 	<!-- 在spring-mvc.xml文件中加入这段配置后，spring返回给页面的都是utf-8编码了 -->
 	<!--<bean-->
-		<!--class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+		<!--class="org.springframework.controller.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
 		<!--<property name="messageConverters">-->
 			<!--<list>-->
 				<!--<bean-->
@@ -50,7 +50,7 @@
 		<!--</property>-->
 	<!--</bean>-->
 	<!-- 4.扫描web相关的bean -->
-	<context:component-scan base-package="com.imooc.myo2o.web" />
+	<context:component-scan base-package="com.web.myo2o.controller" />
 	<!-- 5.权限拦截器 -->
 	<!--<mvc:interceptors>-->
 		<!--<mvc:interceptor>-->
@@ -59,7 +59,7 @@
 			<!--<mvc:exclude-mapping path="/shop/ownerlogincheck" />-->
 			<!--<mvc:exclude-mapping path="/shop/logout" />-->
 			<!--<mvc:exclude-mapping path="/shop/register" />-->
-			<!--<bean id="ShopInterceptor" class="com.imooc.myo2o.interceptor.shop.ShopLoginInterceptor" />-->
+			<!--<bean id="ShopInterceptor" class="com.webyo2o.interceptor.shop.ShopLoginInterceptor" />-->
 		<!--</mvc:interceptor>-->
 		<!--<mvc:interceptor>-->
 			<!--<mvc:mapping path="/shop/**" />-->
@@ -84,7 +84,7 @@
 			<!--<mvc:exclude-mapping path="/shop/getshopinitinfo" />-->
 			<!--<mvc:exclude-mapping path="/shop/registershop" />-->
 			<!--<bean id="ShopPermissionInterceptor"-->
-				<!--class="com.imooc.myo2o.interceptor.shop.ShopPermissionInterceptor" />-->
+				<!--class="com.webyo2o.interceptor.shop.ShopPermissionInterceptor" />-->
 		<!--</mvc:interceptor>-->
 		<!--<mvc:interceptor>-->
 			<!--<mvc:mapping path="/superadmin/**" />-->
@@ -93,7 +93,7 @@
 			<!--<mvc:exclude-mapping path="/superadmin/main" />-->
 			<!--<mvc:exclude-mapping path="/superadmin/top" />-->
 			<!--<bean id="SuperAdminInterceptor"-->
-				<!--class="com.imooc.myo2o.interceptor.superadmin.SuperAdminLoginInterceptor" />-->
+				<!--class="com.webyo2o.interceptor.superadmin.SuperAdminLoginInterceptor" />-->
 		<!--</mvc:interceptor>-->
 
 	<!--</mvc:interceptors>-->

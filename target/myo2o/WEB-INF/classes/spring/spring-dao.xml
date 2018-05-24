@@ -10,7 +10,7 @@
 	<!-- 配置整合mybatis过程 -->
 	<!-- 1.配置数据库相关参数properties的属性：${url} -->
 
-	<!--<bean class="com.imooc.myo2o.util.EncryptPropertyPlaceholderConfigurer">-->
+	<!--<bean class="com.webyo2o.util.EncryptPropertyPlaceholderConfigurer">-->
 		<!--<property name="locations">-->
 			<!--<list>-->
 				<!--<value>classpath:jdbc.properties</value>-->
@@ -21,7 +21,7 @@
 	<!--</bean>-->
 
 	<!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
-	<bean class="com.imooc.myo2o.util.EncryptPropertyPlaceholderConfigurer">
+	<bean class="com.web.myo2o.util.EncryptPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
@@ -62,7 +62,7 @@
     </bean>
 
     <!--配置动态数据源,这里的targetDataSources就是路由数据源所对应的名称-->
-    <bean id="dynamicDataSource" class="com.imooc.myo2o.dao.split.DynamicDataSource">
+    <bean id="dynamicDataSource" class="com.web.myo2o.dao.split.DynamicDataSource">
         <property name="targetDataSources">
             <map>
                 <entry value-ref="master" key="master"></entry>
@@ -86,18 +86,18 @@
 		<!-- 配置MyBaties全局配置文件:mybatis-config.xml -->
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 		<!-- 扫描entity包 使用别名 -->
-		<property name="typeAliasesPackage" value="com.imooc.myo2o.entity" />
+		<property name="typeAliasesPackage" value="com.web.myo2o.entity" />
 		<!-- 扫描sql配置文件:mapper需要的xml文件 -->
 		<property name="mapperLocations" value="classpath:mapper/*.xml" />
 	</bean>
 
-	<!--<context:component-scan base-package="com.imooc.myo2o.dao"/>-->
+	<!--<context:component-scan base-package="com.webyo2o.dao"/>-->
 
 	<!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 注入sqlSessionFactory -->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 		<!-- 给出需要扫描Dao接口包 -->
-		<property name="basePackage" value="com.imooc.myo2o.dao" />
+		<property name="basePackage" value="com.web.myo2o.dao" />
 	</bean>
 </beans>

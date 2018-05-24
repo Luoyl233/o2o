@@ -3,8 +3,8 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--上面的意思是这个文档是严格按照mybatis-3-mapper.dtd规范来命名标签的-->
-<mapper namespace="com.imooc.myo2o.dao.AreaDao">
-	<select id="queryArea" resultType="com.imooc.myo2o.entity.Area">
+<mapper namespace="com.web.myo2o.dao.AreaDao">
+	<select id="queryArea" resultType="com.web.myo2o.entity.Area">
 		<!--id对应着dao接口中的方法的名字,mybatis很方便的一点就是可以用sql语句来控制输出，
 		而hibernate需要注入一些奇怪的语法-->
 		SELECT
@@ -28,7 +28,7 @@
 		(#{areaName},#{areaDesc},#{priority},
 		#{createTime},#{lastEditTime})
 	</insert>
-	<update id="updateArea" parameterType="com.imooc.myo2o.entity.Area">
+	<update id="updateArea" parameterType="com.web.myo2o.entity.Area">
 		update tb_area
 		<set>
 			<if test="areaName != null">area_name=#{areaName},</if>
