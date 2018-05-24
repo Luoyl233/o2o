@@ -49,6 +49,7 @@ public class AreaServiceImpl implements AreaService {
 		ObjectMapper mapper = new ObjectMapper();
 		if (!jedisKeys.exists(key)) {
 			areaList = areaDao.queryArea();
+
 			String jsonString = mapper.writeValueAsString(areaList);
 			jedisStrings.set(key, jsonString);
 		} else {

@@ -56,8 +56,12 @@ public class AdminController {
 		return "shop/shoplist";
 	}
 
+
+
 	@RequestMapping(value = "/shopmanage", method = RequestMethod.GET)
 	private String shopManage(HttpServletRequest request) {
+
+
 		long shopId = HttpServletRequestUtil.getLong(request, "shopId");
 		if (shopId <= 0) {
 			Object currentShopObj = request.getSession().getAttribute(

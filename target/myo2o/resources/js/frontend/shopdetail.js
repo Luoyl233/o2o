@@ -126,6 +126,7 @@ $(function() {
 								+ productId;
 					});
 
+	// 如这里出现同一个店铺信息加载两次的情况，可以考虑将input改为change
 	$('#search').on('input', function(e) {
 		productName = e.target.value;
 		$('.list-div').empty();

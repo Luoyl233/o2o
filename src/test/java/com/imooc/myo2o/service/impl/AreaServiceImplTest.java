@@ -27,7 +27,6 @@ public class AreaServiceImplTest extends BaseTest{
         assertEquals("区域1",list.get(0).getAreaName());
         cacheService.removeFromCache(areaService.AREALISTKEY);
         list=areaService.getAreaList();
-
     }
 
 }

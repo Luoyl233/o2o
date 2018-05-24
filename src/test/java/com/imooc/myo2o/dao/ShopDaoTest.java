@@ -28,8 +28,8 @@ public class ShopDaoTest extends BaseTest {
 		area.setAreaId(5L);
 		ShopCategory sc = new ShopCategory();
 		sc.setShopCategoryId(15L);
-		shop.setShopName("mytest1");
-		shop.setShopDesc("mytest1");
+		shop.setShopName("masterSlave");
+		shop.setShopDesc("masterSlave");
 		shop.setShopAddr("testaddr1");
 		shop.setPhone("13810524526");
 		shop.setShopImg("test1");
@@ -38,7 +38,7 @@ public class ShopDaoTest extends BaseTest {
 		shop.setCreateTime(new Date());
 		shop.setLastEditTime(new Date());
 		shop.setEnableStatus(0);
-		shop.setAdvice("审核中");
+		shop.setAdvice("masterSlave审核中");
 		shop.setArea(area);
 		shop.setShopCategory(sc);
 		int effectedNum = shopDao.insertShop(shop);
